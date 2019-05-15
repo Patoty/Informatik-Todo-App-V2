@@ -1,4 +1,4 @@
-package com.ruperti.Task_app_v2;
+package com.ruperti.todo_app_v2;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -59,7 +59,7 @@ public class TaskDatabase extends SQLiteOpenHelper {
         SQLiteDatabase database = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(NAME_COLUMN, Task.getTaskName();
+        values.put(NAME_COLUMN, Task.getTaskName());
         values.put(IS_DONE_COLUMN, Task.isDone());
         values.put(DUEDATE_COLUMN, Integer.valueOf(Task.getDueDate().toString()));
         values.put(IMPORTANCE_COLUMN, Task.getImportance());
@@ -77,7 +77,7 @@ public class TaskDatabase extends SQLiteOpenHelper {
 
     public Task readTask(final long id) {
         SQLiteDatabase database = this.getReadableDatabase();
-        Cursor cursor = database.query(TABLE_NAME, new String[]{ID_COLUMN, NAME_COLUMN, DUEDATE_COLUMN, IMPORTANT_COLUMN, DESCRIPTION_COLUMN, LATITUDE_COLUMN, LONGITUDE_COLUMN}, ID_COLUMN + " = ?", new String[]{String.valueOf(id)}, null, null, null);
+        Cursor cursor = database.query(TABLE_NAME, new String[]{ID_COLUMN, NAME_COLUMN, DUEDATE_COLUMN, IMPORTANCE_COLUMN, DURATION_COLUMN, PRIORITY_COLUMN, URGENCY_COLUMN}, ID_COLUMN + " = ?", new String[]{String.valueOf(id)}, null, null, null);
 
         Task Task = null;
 
@@ -93,14 +93,14 @@ public class TaskDatabase extends SQLiteOpenHelper {
 //                calendar.setTimeInMillis(cursor.getLong(cursor.getColumnIndex(DUEDATE_COLUMN)) * 1000);
 //            }
 //
-//            Task.setImportant(cursor.getInt(cursor.getColumnIndex(IMPORTANT_COLUMN)) == 1);
+//            Task.setImportance(cursor.getInt(cursor.getColumnIndex(IMPORTANCE_COLUMN)) == 1);
 //
-//            Task.setDescription(cursor.getStrsing(cursor.getColumnIndex(DESCRIPTION_COLUMN)));
+//            Task.setDescription(cursor.getStrsing(cursor.getColumnIndex(DURATION_COLUMN)));
 //
 //            Task.setDueDate(calendar);
 //
-//            if (!cursor.isNull(cursor.getColumnIndex(LATITUDE_COLUMN)) && !cursor.isNull(cursor.getColumnIndex(LONGITUDE_COLUMN))) {
-//                Task.setLocation(new LatLng(cursor.getFloat(cursor.getColumnIndex(LATITUDE_COLUMN)), cursor.getFloat(cursor.getColumnIndex(LONGITUDE_COLUMN))));
+//            if (!cursor.isNull(cursor.getColumnIndex(PRIORITY_COLUMN)) && !cursor.isNull(cursor.getColumnIndex(URGENCY_COLUMN))) {
+//                Task.setLocation(new LatLng(cursor.getFloat(cursor.getColumnIndex(PRIORITY_COLUMN)), cursor.getFloat(cursor.getColumnIndex(URGENCY_COLUMN))));
 //            }
 
         }
@@ -136,10 +136,10 @@ public class TaskDatabase extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
 
         values.put(NAME_COLUMN, Task.getTaskName());
-        values.put(DUEDATE_COLUMN, Task.getDueDate() == null ? null : Integer.valueOf(Task.getDueDate()));
-        values.put(IMPORTANCE_COLUMN, Task.getImportance() ? 1 : 0);
-        values.put(LATITUDE_COLUMN, Task.getLocation() == null ? null : Task.getLocation().latitude);
-        values.put(LONGITUDE_COLUMN, Task.getLocation() == null ? null : Task.getLocation().longitude);
+        values.put(DUEDATE_COLUMN, Integer.valueOf(Task.getDueDate().toString()));
+        values.put(IMPORTANCE_COLUMN, Task.getImportance());
+        values.put(PRIORITY_COLUMN, Task.getPriority());
+        values.put(URGENCY_COLUMN, Task.getUrgency());
 
         database.update(TABLE_NAME, values, ID_COLUMN + " = ?", new String[]{String.valueOf(Task.getId())});
 
