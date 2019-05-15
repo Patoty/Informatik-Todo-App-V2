@@ -4,12 +4,17 @@ import java.util.Date;
 
 public class Task {
 
+    private int id;
     private String taskName;
     private boolean isDone;
     private int duration, importance, urgency, priority;
     Date dueDate;
 
-    public Task(String taskName, boolean isDone, int duration, int importance, int urgency, int priority, Date dueDate){
+    public Task (String taskName){
+        setTaskName(taskName);
+    }
+
+    public Task(int id, String taskName, boolean isDone, int duration, int importance, int urgency, int priority, Date dueDate){
         setTaskName(taskName);
         setDone(isDone);
         setDuration(duration);
@@ -17,9 +22,18 @@ public class Task {
         setUrgency(urgency);
         setPriority(priority);
         setDueDate(dueDate);
+
     }
 
 
+
+   public int getId() {
+        return id;
+   }
+
+   public void setId(int id){
+        this.id = id;
+   }
 
     public String getTaskName() {
         return taskName;
