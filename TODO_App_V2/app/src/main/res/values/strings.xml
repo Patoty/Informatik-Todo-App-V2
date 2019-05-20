@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">TODO_App_V2</string>
+    <string name="xyz">xyz</string>
+    <string name="checkbox">CheckBox</string>
+    <string name="TODAY">\@string/TODAY</string>
+    <string name="checkbox">CheckBox</string>
+    <string name="weekly">WEEKLY</string>
+    <string name="today">TODAY</string>
+    <string name="test">test</string>
 </resources>
