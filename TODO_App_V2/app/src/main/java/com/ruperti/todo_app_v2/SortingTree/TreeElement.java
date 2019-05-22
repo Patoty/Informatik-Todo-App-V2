@@ -10,7 +10,7 @@ public abstract class TreeElement {
     public abstract ArrayList<Task> inorderAusgabe(ArrayList<Task> al);
     public abstract void preorderAusgabe();
     public abstract void postorderAusgabe();
-    public abstract TreeElement add(Task d);
+    public abstract TreeElement add(Task d, int index);
     protected abstract TreeElement addRight(TreeElement t);
     protected abstract TreeElement delete(Task value);
 }

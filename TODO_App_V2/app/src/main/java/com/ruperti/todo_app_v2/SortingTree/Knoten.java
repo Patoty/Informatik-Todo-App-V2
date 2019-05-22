@@ -66,17 +66,56 @@ public class Knoten extends TreeElement{
     }
 
     @Override
-    public TreeElement add(Task d) {
-        if (this.data.compareToImportance(d) == 1) {
-            linkerNachfolger.add(d);
-            return this;
-        }else if (this.data.compareToImportance(d) == -1) {
-            rechterNachfolger.add(d);
-            return this;
-        }else {
-            System.out.println("Error: Das Element ist schon vorhanden");
-            return this;
+    public TreeElement add(Task d, int index) {
+        if(index == 0){
+            if (this.data.compareToImportance(d) == 1) {
+                linkerNachfolger.add(d, index);
+                return this;
+            }else if (this.data.compareToImportance(d) == -1) {
+                rechterNachfolger.add(d, index);
+                return this;
+            }else {
+                System.out.println("Error: Das Element ist schon vorhanden");
+                return this;
+            }
         }
+        if(index == 1){
+            if (this.data.compareToImportance(d) == 1) {
+                linkerNachfolger.add(d, index);
+                return this;
+            }else if (this.data.compareToImportance(d) == -1) {
+                rechterNachfolger.add(d, index);
+                return this;
+            }else {
+                System.out.println("Error: Das Element ist schon vorhanden");
+                return this;
+            }
+        }
+        if (index == 2) {
+            if (this.data.compareToImportance(d) == 1) {
+                linkerNachfolger.add(d, index);
+                return this;
+            }else if (this.data.compareToImportance(d) == -1) {
+                rechterNachfolger.add(d, index);
+                return this;
+            }else {
+                System.out.println("Error: Das Element ist schon vorhanden");
+                return this;
+            }
+        }
+        else{
+            if (this.data.compareToImportance(d) == 1) {
+                linkerNachfolger.add(d, index);
+                return this;
+            }else if (this.data.compareToImportance(d) == -1) {
+                rechterNachfolger.add(d, index);
+                return this;
+            }else {
+                System.out.println("Error: Das Element ist schon vorhanden");
+                return this;
+            }
+        }
+
     }
 
     @Override
