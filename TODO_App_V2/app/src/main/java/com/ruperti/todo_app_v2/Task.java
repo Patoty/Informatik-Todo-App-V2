@@ -127,6 +127,28 @@ public class Task extends Datenelement {
         }
     }
 
+    public int compareToPriority(Task d) {
+        // TODO Auto-generated method stub
+        if (this.priority > d.getPriority()) {
+            return 1;
+        }else if (this.priority < d.getPriority()) {
+            return -1;
+        }else {
+            return 0;
+        }
+    }
+
+    public int compareToDuration(Task d) {
+        // TODO Auto-generated method stub
+        if (this.duration > d.getDuration()) {
+            return 1;
+        }else if (this.duration < d.getDuration()) {
+            return -1;
+        }else {
+            return 0;
+        }
+    }
+
 
 
 }
