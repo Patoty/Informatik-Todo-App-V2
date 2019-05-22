@@ -67,10 +67,10 @@ public class Knoten extends TreeElement{
 
     @Override
     public TreeElement add(Task d) {
-        if (this.data.compareTo(d) == 1) {
+        if (this.data.compareToImportance(d) == 1) {
             linkerNachfolger.add(d);
             return this;
-        }else if (this.data.compareTo(d) == -1) {
+        }else if (this.data.compareToImportance(d) == -1) {
             rechterNachfolger.add(d);
             return this;
         }else {
@@ -82,10 +82,10 @@ public class Knoten extends TreeElement{
     @Override
     protected TreeElement delete(Task value) {
 
-        if (this.data.compareTo(value) == 0) {
+        if (this.data.compareToImportance(value) == 0) {
             this.linkerNachfolger.addRight(rechterNachfolger);
             return linkerNachfolger;
-        }else if(this.data.compareTo(value) == 1) {
+        }else if(this.data.compareToImportance(value) == 1) {
             this.linkerNachfolger.delete(value);
             return this;
         }else {
