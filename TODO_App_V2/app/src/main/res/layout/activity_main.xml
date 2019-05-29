@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/MenuBotton"
         android:layout_width="86dp"
         android:layout_height="67dp"
         android:layout_marginStart="8dp"
@@ -22,31 +22,11 @@
         android:tint="#DDDDDD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_menu_black_24dp" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="80dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="8dp"
-        android:contentDescription="@android:string/untitled"
-        android:tint="#BEBDBD"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.951"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.854"
-        app:srcCompat="@drawable/ic_add_circle_black_24dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -67,7 +47,7 @@
         android:textColorLink="#00FF6969"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.201"
+        app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.1" />
@@ -116,22 +96,6 @@
                 android:textColor="#FFFFFF" />
 
             <CheckBox
-                android:id="@+id/checkBox10"
-                android:layout_width="match_parent"
-                android:layout_height="62dp"
-                android:layout_marginBottom="0dp"
-                android:text="@string/checkbox"
-                android:textColor="#FFFFFF" />
-
-            <CheckBox
-                android:id="@+id/checkBox11"
-                android:layout_width="match_parent"
-                android:layout_height="62dp"
-                android:layout_marginBottom="0dp"
-                android:text="@string/checkbox"
-                android:textColor="#FFFFFF" />
-
-            <CheckBox
                 android:id="@+id/checkBox12"
                 android:layout_width="match_parent"
                 android:layout_height="62dp"
@@ -141,6 +105,22 @@
 
             <CheckBox
                 android:id="@+id/checkBox13"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:layout_marginBottom="0dp"
+                android:text="@string/checkbox"
+                android:textColor="#FFFFFF" />
+
+            <CheckBox
+                android:id="@+id/checkBox10"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:layout_marginBottom="0dp"
+                android:text="@string/checkbox"
+                android:textColor="#FFFFFF" />
+
+            <CheckBox
+                android:id="@+id/checkBox11"
                 android:layout_width="match_parent"
                 android:layout_height="62dp"
                 android:layout_marginBottom="0dp"
@@ -159,45 +139,65 @@
     </ScrollView>
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/PlusButton"
+        android:layout_width="80dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@android:string/untitled"
+        android:tint="#BEBDBD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.877"
+        app:srcCompat="@drawable/ic_add_circle_black_24dp" />
+
+    <ImageView
+        android:id="@+id/IconSortAZ"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginStart="105dp"
-        android:layout_marginLeft="105dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginBottom="16dp"
-        android:tint="#B3B3B3"
+        android:tint="#ADADAD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/IconSortTime"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_access_time_black_24dp" />
+        app:srcCompat="@drawable/ic_sort_by_alpha_black_24dp"
+        android:contentDescription="@string/todo" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/IconSortDuration"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="16dp"
         android:tint="#ADADAD"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintEnd_toStartOf="@+id/IconSortUrgency"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        app:layout_constraintStart_toEndOf="@+id/IconSortAZ"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_error_outline_black_24dp" />
+        app:srcCompat="@drawable/ic_hourglass_empty_black_24dp"
+        android:contentDescription="@string/todo" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/IconSortUrgency"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="320dp"
@@ -213,42 +213,47 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.908"
-        app:srcCompat="@drawable/ic_notifications_none_black_24dp" />
+        app:srcCompat="@drawable/ic_notifications_none_black_24dp"
+        android:contentDescription="@string/todo" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/IconSortImportance"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="16dp"
         android:tint="#ADADAD"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintEnd_toStartOf="@+id/IconSortTime"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_hourglass_empty_black_24dp" />
+        app:srcCompat="@drawable/ic_error_outline_black_24dp"
+        android:contentDescription="@string/todo" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/IconSortTime"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginLeft="105dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginBottom="16dp"
-        android:tint="#ADADAD"
+        android:tint="#B3B3B3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PlusButton"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_sort_by_alpha_black_24dp" />
+        app:srcCompat="@drawable/ic_access_time_black_24dp"
+        android:contentDescription="@string/todo" />
 
 </android.support.constraint.ConstraintLayout>

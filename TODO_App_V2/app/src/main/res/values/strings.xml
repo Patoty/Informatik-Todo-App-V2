@@ -3,8 +3,16 @@
     <string name="xyz">xyz</string>
     <string name="checkbox">CheckBox</string>
     <string name="TODAY">\@string/TODAY</string>
-    <string name="checkbox">CheckBox</string>
     <string name="weekly">WEEKLY</string>
     <string name="today">TODAY</string>
     <string name="test">test</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
+    <string name="name">Name</string>
+    <string name="textview">TextView</string>
+    <string name="date">Date</string>
+    <string name="duration">Duration</string>
 </resources>
