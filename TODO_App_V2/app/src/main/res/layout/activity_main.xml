@@ -22,7 +22,7 @@
         android:tint="#DDDDDD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.025"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
@@ -157,6 +157,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.877"
         app:srcCompat="@drawable/ic_add_circle_black_24dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="64dp"
+        android:layout_height="57dp"
+        app:srcCompat="@drawable/ic_add_circle_black_24dp"
+        tools:layout_editor_absoluteX="302dp"
+        tools:layout_editor_absoluteY="28dp" />
 
     <ImageView
         android:id="@+id/IconSortAZ"
