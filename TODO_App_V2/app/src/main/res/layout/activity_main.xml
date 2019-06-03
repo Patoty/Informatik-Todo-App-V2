@@ -38,7 +38,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/today"
+        android:text="@android:string/untitled"
         android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#F0EDED"
@@ -50,7 +50,8 @@
         app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintVertical_bias="0.1"
+        tools:text="Today" />
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -157,14 +158,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.877"
         app:srcCompat="@drawable/ic_add_circle_black_24dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="64dp"
-        android:layout_height="57dp"
-        app:srcCompat="@drawable/ic_add_circle_black_24dp"
-        tools:layout_editor_absoluteX="302dp"
-        tools:layout_editor_absoluteY="28dp" />
 
     <ImageView
         android:id="@+id/IconSortAZ"
