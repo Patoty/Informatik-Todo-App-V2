@@ -25,8 +25,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.141"
-        tools:text="29-05-19"
-        android:autofillHints="" />
+        tools:text="29-05-19" />
 
     <EditText
         android:id="@+id/editText"
@@ -46,9 +45,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.049"
-        tools:text="lappen"
-        android:importantForAutofill="no"
-        android:autofillHints="" />
+        tools:text="lappen" />
 
     <EditText
         android:id="@+id/editText2"
@@ -68,9 +65,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.163"
-        tools:text="02.30"
-        android:importantForAutofill="no"
-        android:autofillHints="" />
+        tools:text="02.30" />
 
     <TextView
         android:id="@+id/Text_Name"
