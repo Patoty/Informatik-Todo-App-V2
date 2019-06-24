@@ -2,8 +2,7 @@ package com.ruperti.todo_app_v2;
 
 import java.util.Date;
 
-public class Task {
-
+public class Task extends Datenelement {
     private int id;
     private String taskName;
     private boolean isDone;
@@ -27,13 +26,13 @@ public class Task {
 
 
 
-   public int getId() {
+    public int getId() {
         return id;
-   }
+    }
 
-   public void setId(int id){
+    public void setId(int id){
         this.id = id;
-   }
+    }
 
     public String getTaskName() {
         return taskName;
@@ -91,6 +90,65 @@ public class Task {
         this.dueDate = dueDate;
     }
 
-    
+
+    //The methods relevant to the tree for sorting
+    @Override
+    public void setValue(int value) {
+        // TODO Auto-generated method stub
+        super.setValue(value);
+    }
+
+    @Override
+    public int getValue() {
+        // TODO Auto-generated method stub
+        return super.getValue();
+    }
+
+    @Override
+    public int compareToImportance(Task d) {
+        // TODO Auto-generated method stub
+        if (this.importance > d.getImportance()) {
+            return 1;
+        }else if (this.importance < d.getImportance()) {
+            return -1;
+        }else {
+            return 0;
+        }
+    }
+
+    public int compareToUrgency(Task d) {
+        // TODO Auto-generated method stub
+        if (this.urgency > d.getUrgency()) {
+            return 1;
+        }else if (this.urgency < d.getUrgency()) {
+            return -1;
+        }else {
+            return 0;
+        }
+    }
+
+    public int compareToPriority(Task d) {
+        // TODO Auto-generated method stub
+        if (this.priority > d.getPriority()) {
+            return 1;
+        }else if (this.priority < d.getPriority()) {
+            return -1;
+        }else {
+            return 0;
+        }
+    }
+
+    public int compareToDuration(Task d) {
+        // TODO Auto-generated method stub
+        if (this.duration > d.getDuration()) {
+            return 1;
+        }else if (this.duration < d.getDuration()) {
+            return -1;
+        }else {
+            return 0;
+        }
+    }
+
+
 
 }
