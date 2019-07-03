@@ -38,8 +38,8 @@ public class Tree{
 
     }
 
-    public void add(Task d) {
-        root.add(d);
+    public void add(Task d, int index) {
+        root.add(d, index);
     }
 
     private void delete(Task d) {

@@ -10,6 +10,7 @@ import com.ruperti.todo_app_v2.Task;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 public class TaskDatabase extends SQLiteOpenHelper {
@@ -84,25 +85,12 @@ public class TaskDatabase extends SQLiteOpenHelper {
         if (cursor != null && cursor.getCount() > 0) {
             cursor.moveToFirst();
             Task = new Task(cursor.getString(cursor.getColumnIndex(NAME_COLUMN)));
-//            Task.setId(cursor.getLong(cursor.getColumnIndex(ID_COLUMN)));
-//
-//            Calendar calendar = null;
-//
-//            if (!cursor.isNull(cursor.getColumnIndex(DUEDATE_COLUMN))) {
-//                calendar = Calendar.getInstance();
-//                calendar.setTimeInMillis(cursor.getLong(cursor.getColumnIndex(DUEDATE_COLUMN)) * 1000);
-//            }
-//
-//            Task.setImportance(cursor.getInt(cursor.getColumnIndex(IMPORTANCE_COLUMN)) == 1);
-//
-//            Task.setDescription(cursor.getStrsing(cursor.getColumnIndex(DURATION_COLUMN)));
-//
-//            Task.setDueDate(calendar);
-//
-//            if (!cursor.isNull(cursor.getColumnIndex(PRIORITY_COLUMN)) && !cursor.isNull(cursor.getColumnIndex(URGENCY_COLUMN))) {
-//                Task.setLocation(new LatLng(cursor.getFloat(cursor.getColumnIndex(PRIORITY_COLUMN)), cursor.getFloat(cursor.getColumnIndex(URGENCY_COLUMN))));
-//            }
-
+            Task.setId(cursor.getInt(cursor.getColumnIndex(ID_COLUMN)));
+            Task.setImportance(cursor.getInt(cursor.getColumnIndex(IMPORTANCE_COLUMN)));
+            Task.setDuration(cursor.getInt(cursor.getColumnIndex(DURATION_COLUMN)));
+            Task.setDueDate(new Date(cursor.getString(cursor.getColumnIndex(DUEDATE_COLUMN))));
+            Task.setPriority(cursor.getInt(cursor.getColumnIndex(PRIORITY_COLUMN)));
+            Task.setUrgency(cursor.getInt(cursor.getColumnIndex(URGENCY_COLUMN)));
         }
 
         database.close();

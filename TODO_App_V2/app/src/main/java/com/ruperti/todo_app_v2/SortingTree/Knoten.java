@@ -80,10 +80,10 @@ public class Knoten extends TreeElement{
             }
         }
         if(index == 1){
-            if (this.data.compareToImportance(d) == 1) {
+            if (this.data.compareToUrgency(d) == 1) {
                 linkerNachfolger.add(d, index);
                 return this;
-            }else if (this.data.compareToImportance(d) == -1) {
+            }else if (this.data.compareToUrgency(d) == -1) {
                 rechterNachfolger.add(d, index);
                 return this;
             }else {
@@ -92,10 +92,10 @@ public class Knoten extends TreeElement{
             }
         }
         if (index == 2) {
-            if (this.data.compareToImportance(d) == 1) {
+            if (this.data.compareToDuration(d) == 1) {
                 linkerNachfolger.add(d, index);
                 return this;
-            }else if (this.data.compareToImportance(d) == -1) {
+            }else if (this.data.compareToDuration(d) == -1) {
                 rechterNachfolger.add(d, index);
                 return this;
             }else {
@@ -104,10 +104,10 @@ public class Knoten extends TreeElement{
             }
         }
         else{
-            if (this.data.compareToImportance(d) == 1) {
+            if (this.data.compareToPriority(d) == 1) {
                 linkerNachfolger.add(d, index);
                 return this;
-            }else if (this.data.compareToImportance(d) == -1) {
+            }else if (this.data.compareToPriority(d) == -1) {
                 rechterNachfolger.add(d, index);
                 return this;
             }else {

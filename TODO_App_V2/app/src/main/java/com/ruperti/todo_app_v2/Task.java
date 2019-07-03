@@ -21,7 +21,8 @@ public class Task extends Datenelement {
         setUrgency(urgency);
         setPriority(priority);
         setDueDate(dueDate);
-
+        TaskDatabase db = TaskDatabase.getInstance(Task.this);//TODO: learn about android context, get context right, maybe in Activity-class
+        
     }
 
 
