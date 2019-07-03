@@ -13,7 +13,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
+
+    ArrayList<Task> taskList = new ArrayList<Task>();
     private ImageButton PlusButton;
 
     @Override
@@ -56,5 +60,18 @@ public class MainActivity extends AppCompatActivity {
             notificationManager.createNotificationChannel(channel);
         }
 
+    }
+
+    public void sortByDurationButton(View view){
+        this.taskList = Sort.sort(taskList, 2);
+    }
+    public void sortByUrgencyButton(View view){
+        this.taskList = Sort.sort(taskList, 1);
+    }
+    public void sortByImportanceButton(View view){
+        this.taskList = Sort.sort(taskList, 0);
+    }
+    public void sortByTimeButton(View view){
+        this.taskList = Sort.sort(taskList, 3);
     }
 }

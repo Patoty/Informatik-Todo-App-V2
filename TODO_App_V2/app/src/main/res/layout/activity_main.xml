@@ -168,45 +168,21 @@
         app:srcCompat="@drawable/ic_add_circle_black_24dp" />
 
     <ImageButton
-        android:id="@+id/IconSortAZ"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="@android:string/untitled"
-        android:scaleX="3"
-        android:scaleY="3"
-        android:tint="#ADADAD"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/IconSortTime"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_sort_by_alpha_black_24dp" />
-
-    <ImageButton
         android:id="@+id/IconSortDuration"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="16dp"
         android:background="#00FFFFFF"
         android:contentDescription="@android:string/untitled"
+        android:onClick="sortByDurationButton"
         android:scaleX="3"
         android:scaleY="3"
         android:tint="#ADADAD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/IconSortUrgency"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/IconSortAZ"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_hourglass_empty_black_24dp" />
@@ -232,7 +208,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.908"
-        app:srcCompat="@drawable/ic_notifications_none_black_24dp" />
+        app:srcCompat="@drawable/ic_notifications_none_black_24dp"
+        android:onClick = "sortByUrgencyButton" />
 
     <ImageButton
         android:id="@+id/IconSortImportance"
@@ -255,7 +232,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView2"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_error_outline_black_24dp" />
+        app:srcCompat="@drawable/ic_error_outline_black_24dp"
+        android:onClick = "sortByImportanceButton" />
 
     <ImageButton
         android:id="@+id/IconSortTime"
@@ -278,6 +256,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PlusButton"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_access_time_black_24dp" />
+        app:srcCompat="@drawable/ic_access_time_black_24dp"
+        android:onClick = "sortByTimeButton" />
 
 </android.support.constraint.ConstraintLayout>
