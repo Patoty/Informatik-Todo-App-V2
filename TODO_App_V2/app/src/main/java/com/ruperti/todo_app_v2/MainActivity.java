@@ -68,9 +68,10 @@ public class MainActivity extends AppCompatActivity {
     public void sortByUrgencyButton(View view){
         this.taskList = Sort.sort(taskList, 1);
     }
+
     public void sortByImportanceButton(View view){
-        this.taskList = Sort.sort(taskList, 0);
-    }
+        this.taskList = Sort.sort(taskList, 0); }
+
     public void sortByTimeButton(View view){
         this.taskList = Sort.sort(taskList, 3);
     }
