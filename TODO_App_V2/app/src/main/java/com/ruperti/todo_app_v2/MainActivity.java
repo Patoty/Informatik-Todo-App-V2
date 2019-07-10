@@ -1,13 +1,10 @@
 package com.ruperti.todo_app_v2;
 
-
 import android.content.Intent;
-
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.os.Build;
 import android.support.v4.app.NotificationCompat;
-
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;

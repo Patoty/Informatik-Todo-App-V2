@@ -8,11 +8,17 @@ import java.util.List;
 
 public class Sort {
 
-    public static List<Task> sort(ArrayList<Task> inputList){
+    public static List<Task> sort(ArrayList<Task> inputList, int index){
+
+        //index 0 sorts by importance
+        //index 1 sorts by urgency
+        //index 2 sorts by duration
+        //index 3 sorts by priority
+
         Tree temporaryTree = new Tree();
         for (Task task: inputList
              ) {
-            temporaryTree.add(task);
+            temporaryTree.add(task, index);
         }
 
         return temporaryTree.inorderAusgabe(inputList);
