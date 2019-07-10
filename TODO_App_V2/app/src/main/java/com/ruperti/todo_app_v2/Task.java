@@ -1,5 +1,7 @@
 package com.ruperti.todo_app_v2;
 
+import android.content.Context;
+
 import java.util.Date;
 
 public class Task extends Datenelement {
@@ -13,16 +15,16 @@ public class Task extends Datenelement {
         setTaskName(taskName);
     }
 
-    public Task(int id, String taskName, boolean isDone, int duration, int importance, int urgency, int priority, Date dueDate){
+    public Task(int id, String taskName, boolean isDone, int duration, int importance, int urgency,  Date dueDate){
         setTaskName(taskName);
         setDone(isDone);
-        setDuration(duration);
+        setDuration(duration); // 1 = eine Minute, für eine Stunde 60, ...
         setImportance(importance);
         setUrgency(urgency);
-        setPriority(priority);
+        setPriority(this.importance, this.urgency);
         setDueDate(dueDate);
-        TaskDatabase db = TaskDatabase.getInstance(Task.this);//TODO: learn about android context, get context right, maybe in Activity-class
-        
+        TaskDatabase db = TaskDatabase.getInstance(new String(Context.STORAGE_SERVICE));//TODO: learn about android context, get context right, maybe in Activity-class
+        db.createTask(this);
     }
 
 
@@ -64,7 +66,9 @@ public class Task extends Datenelement {
     }
 
     public void setImportance(int importance) {
-        this.importance = importance;
+        if (importance>100) this.importance = 100;
+        else if (importance < 0 ) this.importance = 0;
+        else this.importance = importance;
     }
 
     public int getUrgency() {
@@ -72,15 +76,21 @@ public class Task extends Datenelement {
     }
 
     public void setUrgency(int urgency) {
-        this.urgency = urgency;
+        if (urgency>100) this.urgency = 100;
+        if (urgency<0) this.urgency = 0;
+        else this.urgency = urgency;
     }
 
     public int getPriority() {
         return priority;
     }
 
-    public void setPriority(int priority) {
-        this.priority = priority;
+    public void setPriority(int importance, int urgency) {
+        try{
+            this.priority = (int) Math.sqrt(importance * importance + urgency * urgency);
+        }catch (Exception e) {
+            this.priority = 0;
+        }
     }
 
     public Date getDueDate(){

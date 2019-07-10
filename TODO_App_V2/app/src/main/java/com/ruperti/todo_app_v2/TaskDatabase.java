@@ -89,7 +89,6 @@ public class TaskDatabase extends SQLiteOpenHelper {
             Task.setImportance(cursor.getInt(cursor.getColumnIndex(IMPORTANCE_COLUMN)));
             Task.setDuration(cursor.getInt(cursor.getColumnIndex(DURATION_COLUMN)));
             Task.setDueDate(new Date(cursor.getString(cursor.getColumnIndex(DUEDATE_COLUMN))));
-            Task.setPriority(cursor.getInt(cursor.getColumnIndex(PRIORITY_COLUMN)));
             Task.setUrgency(cursor.getInt(cursor.getColumnIndex(URGENCY_COLUMN)));
         }
 
