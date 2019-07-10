@@ -15,7 +15,7 @@ public class Task extends Datenelement {
         setTaskName(taskName);
     }
 
-    public Task(int id, String taskName, boolean isDone, int duration, int importance, int urgency,  Date dueDate){
+    public Task(String taskName, boolean isDone, int duration, int importance, int urgency,  Date dueDate){
         setTaskName(taskName);
         setDone(isDone);
         setDuration(duration); // 1 = eine Minute, für eine Stunde 60, ...
@@ -23,8 +23,8 @@ public class Task extends Datenelement {
         setUrgency(urgency);
         setPriority(this.importance, this.urgency);
         setDueDate(dueDate);
-        TaskDatabase db = TaskDatabase.getInstance(new String(Context.STORAGE_SERVICE));//TODO: learn about android context, get context right, maybe in Activity-class
-        db.createTask(this);
+        //TaskDatabase db = TaskDatabase.getInstance(new String(Context.STORAGE_SERVICE));//TODO: learn about android context, get context right, maybe in Activity-class
+        //db.createTask(this);
     }
 
 

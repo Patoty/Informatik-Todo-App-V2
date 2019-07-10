@@ -8,6 +8,7 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageButton;
 
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     ArrayList<Task> taskList = new ArrayList<Task>();
-    private ImageButton PlusButton;
+    //private ImageButton PlusButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,12 +24,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        PlusButton.setOnClickListener(new View.OnClickListener() {
+        /*PlusButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openActivityCreateTask();
             }
-        });
+        });*/
 
     }
     private void openActivityCreateTask() {
@@ -71,5 +72,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void sortByTimeButton(View view){
         this.taskList = Sort.sort(taskList, 3);
+    }
+
+    public void addNewTaskButton(View view) {
+        Intent i = new Intent(this, CreateTaskActivity.class);
+        startActivity(i);
     }
 }

@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Sort {
 
-    public static List<Task> sort(ArrayList<Task> inputList, int index){
+    public static ArrayList<Task> sort(ArrayList<Task> inputList, int index){
 
         //index 0 sorts by importance
         //index 1 sorts by urgency
