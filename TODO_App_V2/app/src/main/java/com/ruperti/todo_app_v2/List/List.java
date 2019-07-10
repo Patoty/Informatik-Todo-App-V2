@@ -7,7 +7,7 @@ public class List {
     public ListElement first;
 
     public List(){
-        first = new End;
+        first = new End();
         }
     public void insert(Task T){
      ListElement oldfirst = first;

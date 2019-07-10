@@ -25,9 +25,7 @@ public class CreateTaskActivity extends AppCompatActivity {
         Task_DateInput = (EditText)findViewById(R.id.Text_Task_Date);
         Task_TimeInput = (EditText)findViewById(R.id.Text_Task_Time);
 
-        Task_NameInput.setOnClickListener(new OnClickListener());
-        Task_DateInput.setOnClickListener(new OnClickListener());
-        Task_TimeInput.setOnClickListener(new OnClickListener());
+
     }
 
 }

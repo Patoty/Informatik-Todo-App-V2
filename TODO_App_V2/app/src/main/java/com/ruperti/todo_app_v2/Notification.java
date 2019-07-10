@@ -8,7 +8,7 @@ import android.support.v4.content.ContextCompat;
 
 public class Notification {
     NotificationCompat.Builder builder;
-
+//not working
     public Notification(String notificationText){
         builder = new NotificationCompat.Builder(this, NotificationChannel.DEFAULT_CHANNEL_ID).setContentTitle("Task Reminder").setContent(notificationText).setPriority(NotificationCompat.PRIORITY_DEFAULT).setVisibility(NotificationCompat.VISIBILITY_PUBLIC);
 
